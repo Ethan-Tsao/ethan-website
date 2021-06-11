@@ -1,12 +1,13 @@
-import { Layout } from "../components/Layout";
+import { Hero } from "../components/Hero";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { LightMode } from "@chakra-ui/react";
 
 const LifeDrawing = () => (
   <>
-    <Layout
-      title="Life Drawing"
-      subtitle="Like you wouldn't believe"
-      alignment="center"
-    />
+    <LightMode>
+      <DarkModeSwitch />
+      <Hero title="Life Drawing" subtitle="like you wouldn't believe" />
+    </LightMode>
   </>
 );
 

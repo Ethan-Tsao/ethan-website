@@ -8,6 +8,7 @@ import {
   Image,
   HStack,
   Center,
+  AspectRatio,
 } from "@chakra-ui/react";
 
 export const Carousel = () => {
@@ -25,26 +26,27 @@ export const Carousel = () => {
     borderRadius: "0 3px 3px 0",
     userSelect: "none",
     _hover: {
-      opacity: 0.8,
+      opacity: 1,
       bg: "black",
+      color: "blue.500",
     },
   };
 
   const slides = [
     {
-      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      vid: "https://player.vimeo.com/video/310716029",
     },
     {
-      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      vid: "https://player.vimeo.com/video/310661058",
     },
     {
-      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      vid: "https://player.vimeo.com/video/310664847",
     },
     {
-      img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      vid: "https://player.vimeo.com/video/310716118",
     },
     {
-      img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      vid: "https://player.vimeo.com/video/262593120",
     },
   ];
 
@@ -75,34 +77,59 @@ export const Carousel = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Flex w="50vw" overflow="hidden" pos="relative">
-          <Flex h="400px" w="full" {...carouselStyle}>
+        {/* Actual Carousel component */}
+        <Flex w="60vw" overflow="hidden" pos="relative">
+          <Flex w="full" {...carouselStyle}>
             {slides.map((slide, sid) => (
-              <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
-                <Text
-                  color="white"
-                  fontSize="xs"
+              <Box key={`slide-${sid}`} boxSize="full" flex="none">
+                {/* <Text
+                  color="black"
+                  fontSize="md"
                   p="8px 12px"
                   pos="absolute"
                   top="0"
                 >
                   {sid + 1} / {slidesCount}
-                </Text>
-                <Image src={slide.img} boxSize="full" backgroundSize="cover" />
+                </Text> */}
+                <AspectRatio>
+                  <iframe
+                    src={slide.vid}
+                    width="640"
+                    height="346"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </AspectRatio>
               </Box>
             ))}
           </Flex>
 
           {/* Arrow Controls */}
-          <Text {...arrowStyles} left="0" onClick={prevSlide}>
+          <Text
+            {...arrowStyles}
+            left="0"
+            onClick={prevSlide}
+            color="white"
+            bg="black"
+            opacity="0.8"
+            fontSize="3xl"
+          >
             &#10094;
           </Text>
-          <Text {...arrowStyles} right="0" onClick={nextSlide}>
+          <Text
+            {...arrowStyles}
+            right="0"
+            onClick={nextSlide}
+            color="white"
+            bg="black"
+            opacity="0.8"
+            fontSize="3xl"
+          >
             &#10095;
           </Text>
 
           {/* Dot Indicators */}
-          <HStack justify="center" pos="absolute" bottom="8px" w="full">
+          <HStack justify="center" pos="absolute" bottom="4vh" w="full">
             {Array.from({ length: slidesCount }).map((_, slide) => (
               <Box
                 key={`dots-${slide}`}
@@ -126,4 +153,4 @@ export const Carousel = () => {
   );
 };
 
-// export default Carousel;
+export default Carousel;
