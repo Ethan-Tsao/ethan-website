@@ -1,12 +1,14 @@
-import { Hero } from "../components/Hero";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { Layout } from "../components/Layout";
 import { LightMode } from "@chakra-ui/react";
 
 const AboutMe = () => (
   <>
     <LightMode>
-      <DarkModeSwitch />
-      <Hero title="About Me" subtitle="I'm alright I guess" />
+      <Layout
+        headTitle="All About Me"
+        title="My name is Natalie"
+        subtitle="And I like bears"
+      />
     </LightMode>
   </>
 );

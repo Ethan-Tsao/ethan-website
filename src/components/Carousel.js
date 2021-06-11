@@ -81,14 +81,7 @@ export const Carousel = () => {
         <Flex w="60vw" overflow="hidden" pos="relative">
           <Flex w="full" {...carouselStyle}>
             {slides.map((slide, sid) => (
-              <Box
-                key={`slide-${sid}`}
-                boxSize="full"
-                flex="none"
-                // bg="gray.200"
-                // px="3vw"
-                rounded="2xl"
-              >
+              <Box key={`slide-${sid}`} boxSize="full" flex="none">
                 {/* <Text
                   color="black"
                   fontSize="md"
