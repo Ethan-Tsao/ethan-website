@@ -1,14 +1,12 @@
-import { Hero } from "../components/Hero";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Carousel } from "../components/Carousel";
 import { LightMode } from "@chakra-ui/react";
+import { Layout } from "../components/Layout";
 
 const Index = () => {
   return (
     <>
       <LightMode>
-        <DarkModeSwitch />
-        <Hero />
+        <Layout headTitle="Natalie Carmouche" />
         <Carousel />
       </LightMode>
     </>

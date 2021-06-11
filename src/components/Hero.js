@@ -61,7 +61,7 @@ export function Hero({ title, subtitle, image, ctaLink, ctaText, ...rest }) {
         >
           <Heading
             as="h1"
-            size="3xl"
+            fontSize="8vh"
             fontWeight="bold"
             color="primary.800"
             textAlign={["center", "center", "left", "left"]}
@@ -94,7 +94,13 @@ export function Hero({ title, subtitle, image, ctaLink, ctaText, ...rest }) {
           </NextLink> */}
         </Stack>
         <Box w={{ base: "80%", sm: "60%", md: "50%" }} mb={{ base: 12, md: 0 }}>
-          <Image src={image} size="100%" rounded="1rem" shadow="2xl" />
+          <Image
+            src={image}
+            size="100%"
+            rounded="1rem"
+            shadow="2xl"
+            ml={[0, 0, 0, 20]}
+          />
         </Box>
       </Flex>
       <Center bg="orange.100" h="10vh">

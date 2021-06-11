@@ -81,7 +81,14 @@ export const Carousel = () => {
         <Flex w="60vw" overflow="hidden" pos="relative">
           <Flex w="full" {...carouselStyle}>
             {slides.map((slide, sid) => (
-              <Box key={`slide-${sid}`} boxSize="full" flex="none">
+              <Box
+                key={`slide-${sid}`}
+                boxSize="full"
+                flex="none"
+                // bg="gray.200"
+                // px="3vw"
+                rounded="2xl"
+              >
                 {/* <Text
                   color="black"
                   fontSize="md"
@@ -112,7 +119,7 @@ export const Carousel = () => {
             color="white"
             bg="black"
             opacity="0.8"
-            fontSize="3xl"
+            fontSize={["lg", "xl", "2xl", "3xl"]}
           >
             &#10094;
           </Text>
@@ -123,7 +130,7 @@ export const Carousel = () => {
             color="white"
             bg="black"
             opacity="0.8"
-            fontSize="3xl"
+            fontSize={["lg", "xl", "2xl", "3xl"]}
           >
             &#10095;
           </Text>

@@ -1,13 +1,14 @@
-import { Hero } from "../components/Hero";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
-import { Carousel } from "../components/Carousel";
+import { Layout } from "../components/Layout";
 import { LightMode } from "@chakra-ui/react";
 
 const Storyboards = () => (
   <>
     <LightMode>
-      <DarkModeSwitch />
-      <Hero title="Storyboards" subtitle="like you wouldn't believe" />
+      <Layout
+        headTitle="Natalie's Storyboards"
+        title="Storyboards"
+        subtitle="Like you wouldn't believe"
+      />
     </LightMode>
   </>
 );
