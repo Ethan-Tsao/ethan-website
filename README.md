@@ -17,9 +17,7 @@ This is a static website built using Next.js and Chakra UI. This was not built f
 [Next.js Documentation](https://nextjs.org/docs)
 [Chakra UI Documentation](https://chakra-ui.com/docs/getting-started)
 [Hero Section](https://raptis.wtf/blog/build-a-landing-page-with-chakra-ui-part-1/#sum-up)
+[Next.js Basic Auth](https://komelin.com/articles/http-basic-auth-nextjs/)
 
 # To-Do
 
-- Update each page with relevant content
-- (optional) create a footer
-- make sure everything is responsive

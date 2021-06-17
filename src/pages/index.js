@@ -1,15 +1,29 @@
-import { Carousel } from "../components/Carousel";
-import { LightMode } from "@chakra-ui/react";
 import { Layout } from "../components/Layout";
+import { Image, VStack, Center, Heading } from "@chakra-ui/react";
+import Head from "next/head";
 
 const Index = () => {
   return (
-    <>
-      <LightMode>
-        <Layout headTitle="Natalie Carmouche" />
-        <Carousel />
-      </LightMode>
-    </>
+    <Layout>
+      <Head>
+        <title>Natalie Carmouche</title>
+        {/* <link rel="shortcut icon" href="/public/favicon.ico" /> */}
+      </Head>
+      <Center>
+        <VStack width="80%" mt="3rem" spacing="4rem" justifyContent="center">
+          <Heading
+            as="h1"
+            fontSize={["2rem","3rem","4rem","5rem"]}
+            fontWeight="bold"
+            color="primary.800"
+            textAlign={["center", "center", "left", "left"]}
+          >
+            Storyboards
+          </Heading>
+          <Image src="/CONTACTME.png" />
+        </VStack>
+      </Center>
+    </Layout>
   );
 };
 

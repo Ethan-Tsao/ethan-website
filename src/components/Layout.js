@@ -1,30 +1,18 @@
-import { Hero } from "../components/Hero";
+import { LightMode, Box, Center, Flex } from "@chakra-ui/react";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
-import Head from "next/head";
 
-export const Layout = ({
-  title,
-  subtitle,
-  image,
-  ctaLink,
-  ctaText,
-  headTitle,
-  ...rest
-}) => {
+
+export const Layout = ({ children }) => {
   return (
     <>
-      <Head>
-        <title>{headTitle}</title>
-        {/* <link rel="shortcut icon" href="/public/favicon.ico" /> */}
-      </Head>
-      <DarkModeSwitch />
-      <Hero
-        title={title}
-        subtitle={subtitle}
-        image={image}
-        ctaLink={ctaLink}
-        ctaText={ctaText}
-      />
+      <LightMode>
+        <Flex bg="white" justifyContent="center">
+          <Box w="60%">
+            <DarkModeSwitch />
+            {children}
+          </Box>
+        </Flex>
+      </LightMode>
     </>
   );
 };
