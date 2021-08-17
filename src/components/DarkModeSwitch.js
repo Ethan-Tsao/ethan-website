@@ -61,6 +61,17 @@ export const DarkModeSwitch = () => {
               About/Contact
             </Button>
           </NextLink>
+
+          <NextLink href="/clientWork" passHref>
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Client Work"
+              fontSize="sm"
+            >
+              Client Work
+            </Button>
+          </NextLink>
         </Flex>
 
         {/* Mobile */}

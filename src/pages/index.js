@@ -13,7 +13,7 @@ const Index = () => {
         <VStack width="80%" mt="3rem" spacing="4rem" justifyContent="center">
           <Heading
             as="h1"
-            fontSize={["2rem","3rem","4rem","5rem"]}
+            fontSize={["2rem", "3rem", "4rem", "5rem"]}
             fontWeight="bold"
             color="primary.800"
             textAlign={["center", "center", "left", "left"]}
@@ -21,6 +21,14 @@ const Index = () => {
             Storyboards
           </Heading>
           <Image src="/CONTACTME.png" />
+          <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/310716029"
+            width="640"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+          />
         </VStack>
       </Center>
     </Layout>
