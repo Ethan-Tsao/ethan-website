@@ -23,10 +23,10 @@ const options = {
           return Promise.resolve(user);
         } else {
           // If you return null or false then the credentials will be rejected
-          return Promise.resolve(null);
+          //   return Promise.resolve(null);
           // You can also Reject this callback with an Error or with a URL:
           // return Promise.reject(new Error('error message')) // Redirect to error page
-          // return Promise.reject('/path/to/redirect')        // Redirect to a URL
+          return Promise.reject("/clientWork"); // Redirect to a URL
         }
       },
     }),
