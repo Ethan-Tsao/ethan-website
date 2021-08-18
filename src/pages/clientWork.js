@@ -54,8 +54,8 @@ export default function Page() {
                 </LinkBox>
               </Stack>
             </Center>
-            {/* <Center my={6}> */}
-            <AspectRatio ratio={4096 / 2160}>
+
+            <AspectRatio ratio={4096 / 2160} my={8}>
               <ReactPlayer
                 url="boss_1.mp4"
                 controls
@@ -70,11 +70,13 @@ export default function Page() {
                 }}
               />
             </AspectRatio>
-            {/* </Center> */}
-            <Center my={6}>
+
+            <AspectRatio ratio={4096 / 2160} my={8}>
               <ReactPlayer
                 url="boss_2.mp4"
                 controls
+                width="100%"
+                height="100%"
                 config={{
                   file: {
                     attributes: {
@@ -83,11 +85,13 @@ export default function Page() {
                   },
                 }}
               />
-            </Center>
-            <Center my={6}>
+            </AspectRatio>
+            <AspectRatio ratio={4096 / 2160} my={8}>
               <ReactPlayer
                 url="boss_3.mp4"
                 controls
+                width="100%"
+                height="100%"
                 config={{
                   file: {
                     attributes: {
@@ -96,11 +100,13 @@ export default function Page() {
                   },
                 }}
               />
-            </Center>
-            <Center my={6}>
+            </AspectRatio>
+            <AspectRatio ratio={4096 / 2160} my={8}>
               <ReactPlayer
                 url="boss_4.mp4"
                 controls
+                width="100%"
+                height="100%"
                 config={{
                   file: {
                     attributes: {
@@ -109,7 +115,7 @@ export default function Page() {
                   },
                 }}
               />
-            </Center>
+            </AspectRatio>
           </Layout>
         </>
       ) : (
