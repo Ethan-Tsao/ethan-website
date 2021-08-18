@@ -2,7 +2,8 @@ import React from "react";
 import { signIn, useSession } from "next-auth/client";
 import { Layout } from "../components/Layout";
 import ReactPlayer from "react-player/file";
-import { Center } from "@chakra-ui/react";
+import { Center, Heading, Stack, Button } from "@chakra-ui/react";
+import Head from "next/head";
 
 export default function Page() {
   const [session, loading] = useSession();
@@ -15,6 +16,9 @@ export default function Page() {
     <>
       {session ? (
         <>
+          <Head>
+            <title>Client Work</title>
+          </Head>
           <Layout
             headTitle="Natalie's Animations"
             title="Animations"
@@ -75,10 +79,21 @@ export default function Page() {
           </Layout>
         </>
       ) : (
-        <p>
-          <p>You are not permitted to see this page.</p>
-          <button onClick={signIn}>Sign in</button>
-        </p>
+        <Layout
+          headTitle="Natalie's Animations"
+          title="Animations"
+          subtitle="Like you wouldn't believe"
+        >
+          <Center>
+            <Stack direction="column" my={6} spacing={6}>
+              <Center>
+                <Heading>You are not permitted to see this page!</Heading>
+              </Center>
+              <Heading>Please sign in before viewing this content</Heading>
+              <Button onClick={signIn}>Sign in</Button>
+            </Stack>
+          </Center>
+        </Layout>
       )}
     </>
   );
